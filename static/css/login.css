@@ -59,11 +59,17 @@ h2 {
    padding: 0 0 20px;
    margin-bottom: 10px;
    text-align: center;
+   font-weight: 500;
 }
 
 .loginbox input{
   width: 100%;
   margin-bottom: 20px;
+}
+
+.loginbox .checkbox input{
+  width: auto;
+  margin-bottom: 10px;
 }
 
 .loginbox input[type=text],
@@ -76,7 +82,7 @@ h2 {
    color: #616161;
    background: white;
    font-size: 16px;
-   padding-left: 20px;
+   padding-left: 25px;
    box-sizing: border-box;
 }
 
@@ -110,7 +116,23 @@ h2 {
 .loginbox p{
    font-family: "Oswald Light";
    text-align: right;
-   margin: 5px 0;
+   margin: -30px 0 5px 0;
+}
+
+p.p-forgot1{
+   text-align: center;
+   margin: -20px 0 50px 0;
+}
+
+p.p-forgot2{
+   font-size: 14px;
+   text-align: center;
+   margin: 10px 0 0 0;
+}
+
+.loginbox .checkbox p{
+  text-align: left;
+  margin-left: 25px;
 }
 
 .loginbox .glass p a{
