@@ -37,7 +37,7 @@ body {
 }
 
 .glass img {
-   margin-left: -10px;
+   margin-left: -15px;
    margin-bottom: 50px;
    width: 300px;
    height: 100px;
@@ -107,7 +107,7 @@ h2 {
    margin-top: 20px;
    height: 40px;
    font-size: 16px;
-   background: #7bae91;
+   background: #E74C3C;
    color: white;
    border-radius: 20px;
    cursor: pointer;
