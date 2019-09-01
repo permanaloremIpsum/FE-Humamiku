@@ -64,9 +64,9 @@
                   <li><a href="index.html"><i class="fa fa-home"></i> Dashboard </a></li>
                   <li><a href="#"><i class="fa fa-users"></i> Manajemen Profile </a></li>
                   <li><a href="show_role.html"><i class="fa fa-edit"></i> Manajemen Role </a></li>
-                  <li><a href="show_jabatan.html"><i class="fa fa-gear"></i> Manajemen Jabatan </a></li>
-                  <li><a href="show_user.html"><i class="fa fa-user"></i> Manajemen User </a></li>
-                  <li><a href="show_pertemuan.html"><i class="fa fa-table"></i> Manajemen Pertemuan </a></li>
+                  <li><a href="#"><i class="fa fa-gear"></i> Manajemen Jabatan </a></li>
+                  <li><a href="#"><i class="fa fa-user"></i> Manajemen User </a></li>
+                  <li><a href="#"><i class="fa fa-table"></i> Manajemen Notulen </a></li>
                   <li><a href="#"><i class="fa fa-dollar"></i> Manajemen KAS </a></li>
                   <li><a href="#"><i class="fa fa-check-square-o"></i> Check Kehadiran </a></li>
                   <li><a href="#"><i class="fa fa-check-square-o"></i> Check Notulen </a></li>
@@ -198,49 +198,110 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <!-- top tiles -->
-          <div class="row tile_count">
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-              <div class="count">2500</div>
-              <span class="count_bottom"><i class="green">4% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
-              <div class="count">123.50</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-              <div class="count green">2,500</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-              <div class="count">4,567</div>
-              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-              <div class="count">2,315</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-              <div class="count">7,325</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
-          </div>
-          <!-- /top tiles -->
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Manajemen User <small>HUMAMIKU</small></h3>
+              </div>
 
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="jumbotron">
-                  <h1>Welcome to Dashboard</h1> 
-                  <p>HUMAMIKU</p>
-                  <p>Himpunan Muda-Mudi Kepuh</p>
-                  <!-- <img src="images/humamiku.png" alt="" class="img-jumbotron"> -->
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
                 </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Add User <small>Manajemen User</small></h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Role <span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select class="form-control">
+                            <option>--Pilih Role--</option>
+                            <option value="Level 1">Role 1</option>
+                            <option value="Level 2">Role 2</option>
+                            <option value="Level 3">Role 3</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" required="required" name="name" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Email <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="email" required="required" name="email" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Password <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="password" required="required" name="password" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Jabatan <span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select class="form-control">
+                            <option>--Pilih Jabatan--</option>
+                            <option value="Level 1">Ketua</option>
+                            <option value="Level 2">Wakil Ketua</option>
+                            <option value="Level 3">Sekretaris</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender <span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select class="form-control">
+                            <option>--Pilih Jabatan--</option>
+                            <option value="laki-laki">Laki-Laki</option>
+                            <option value="perempuan">Perempuan</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">TTL <span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" class="form-control has-feedback-left" id="single_cal3" placeholder="First Name" aria-describedby="inputSuccess2Status3">
+                          <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
+                          <span id="inputSuccess2Status3" class="sr-only">(success)</span>
+                        </div>
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <a href="show_user.html" type="button" class="btn btn-primary"><i class="fa fa-rotate-left"></i> Kembali</a>
+                          <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
+                        </div>
+                      </div>
+
+                    </form>
+
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
