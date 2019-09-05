@@ -198,7 +198,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Manajemen User <small>HUMAMIKU</small></h3>
+                <h3>Check Kehadiran <small>HUMAMIKU</small></h3>
               </div>
 
               <div class="title_right">
@@ -219,81 +219,114 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <!-- <h2>Hover rows <small>Try hovering over the rows</small></h2> -->
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-6">
-                        <a href="add_user.html" type="button" class="btn btn-round btn-success btn-sm"><i class="fa fa-plus"></i> Add User</a>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="show-table">
-                          <label style="float: right;">
-                            Show
-                            <select id="heard" class="form-control entries" required>
-                              <option value="10">10</option>
-                              <option value="20">20</option>
-                              <option value="30">30</option>
-                              <option value="40">40</option>
-                            </select>
-                             entries
-                          </label>
-                        </div>
-                      </div>
-                    </div>
+                    <h2>Kehadiran :</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <table class="table table-hover">
-                      <thead>
-                        <tr>
-                          <th class="th-table">No</th>
-                          <th class="th-table">Nama</th>
-                          <th class="th-table">Email</th>
-                          <th class="th-table">Role</th>
-                          <th class="th-table">Jabatan</th>
-                          <th class="th-table">Status</th>
-                          <th class="th-table">Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row" class="col-md-1">1</th>
-                          <td>Nama 1</td>
-                          <td>nama1@gmail.com</td>
-                          <td>Role 1</td>
-                          <td>Ketua</td>
-                          <td>Active</td>
-                          <td class="col-md-2">
-                            <a href="edit_user.html" type="button" class="btn btn-round btn-info btn-sm"><i class="fa fa-edit"></i> Edit</a>
-                            <a href="#" type="button" class="btn btn-round btn-danger btn-sm"><i class="fa fa-trash"></i> Delete</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="col-md-1">2</th>
-                          <td>Nama 2</td>
-                          <td>nama2@gmail.com</td>
-                          <td>Role 2</td>
-                          <td>Wakil Ketua</td>
-                          <td>Active</td>
-                          <td class="col-md-2">
-                            <a href="#" type="button" class="btn btn-round btn-info btn-sm"><i class="fa fa-edit"></i> Edit</a>
-                            <a href="#" type="button" class="btn btn-round btn-danger btn-sm"><i class="fa fa-trash"></i> Delete</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="col-md-1">3</th>
-                          <td>Nama 3</td>
-                          <td>nama3@gmail.com</td>
-                          <td>Role 3</td>
-                          <td>Sekretaris</td>
-                          <td>Active</td>
-                          <td class="col-md-2">
-                            <a href="#" type="button" class="btn btn-round btn-info btn-sm"><i class="fa fa-edit"></i> Edit</a>
-                            <a href="#" type="button" class="btn btn-round btn-danger btn-sm"><i class="fa fa-trash"></i> Delete</a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th class="th-table col-md-1">No</th>
+                            <th class="th-table col-md-4">Nama</th>
+                            <th class="th-table col-md-2 text-center">11/10/2019</th>
+                            <th class="th-table col-md-2 text-center">12/10/2019</th>
+                            <th class="th-table col-md-2 text-center">13/10/2019</th>
+                            <th class="th-table col-md-2 text-center">14/10/2019</th>
+                            <th class="th-table col-md-2 text-center">15/10/2019</th>
+                            <th class="th-table col-md-2 text-center">16/10/2019</th>
+                            <th class="th-table col-md-2 text-center">17/10/2019</th>
+                            <th class="th-table col-md-2 text-center">18/10/2019</th>
+                            <th class="th-table col-md-2 text-center">19/10/2019</th>
+                            <th class="th-table col-md-2 text-center">20/10/2019</th>
+                            <th class="th-table col-md-2 text-center">21/10/2019</th>
+                            <th class="th-table col-md-2 text-center">22/10/2019</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row" class="col-md-1">1</td>
+                            <td class="col-md-3">Ketua Humamiku</td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                          </tr>
+                          <tr>
+                            <td scope="row" class="col-md-1">2</td>
+                            <td class="col-md-3">Wakil Ketua Humamiku</td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                          </tr>
+                          <tr>
+                            <td scope="row" class="col-md-1">3</td>
+                            <td class="col-md-3">Sekretaris Humamiku</td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                          </tr>
+                          <tr>
+                            <td scope="row" class="col-md-1">4</td>
+                            <td class="col-md-3">Bendahara Humamiku</td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                          </tr>
+                          <tr>
+                            <td scope="row" class="col-md-1">5</td>
+                            <td class="col-md-3">Seksi Humamiku</td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                            <td class="text-center"><span class="label label-success">Hadir</span></td>
+                            <td class="text-center"><span class="label label-danger">Tidak Hadir</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                     <div class="row">
                       <div class="col-lg-6 col-md-6 col-sm-6">
                         <div>Showing 1 to 10 of 57 entries</div>
@@ -332,6 +365,15 @@
         <!-- /footer content -->
       </div>
     </div>
+    
+    <script>
+      $(document).ready(function () {
+      $('#dtHorizontalExample').DataTable({
+      "scrollX": true
+      });
+      $('.dataTables_length').addClass('bs-select');
+      });
+    </script>
 
     <!-- jQuery -->
     <script src="dashboard/vendors/jquery/dist/jquery.min.js"></script>

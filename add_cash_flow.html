@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="dashboard/img/favicon.ico" type="image/ico" />
+  <link rel="icon" href="dashboard/img/favicon.ico" type="image/ico" />
 
     <title> Humamiku </title>
 
@@ -18,7 +18,7 @@
     <link href="dashboard/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="dashboard/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-	
+  
     <!-- bootstrap-progressbar -->
     <link href="dashboard/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
@@ -69,10 +69,8 @@
                   <li><a href="show_pertemuan.html"><i class="fa fa-table"></i> Manajemen Pertemuan </a></li>
                   <li><a href="#"><i class="fa fa-dollar"></i> Manajemen KAS </a></li>
                   <li><a href="show_cash_flow.html"><i class="fa fa-dollar"></i> Manajemen Cash Flow </a></li>
-                  <li><a href="check_kehadiran-I.html"><i class="fa fa-check-square-o"></i> Check Kehadiran I </a></li>
-                  <li><a href="check_kehadiran-II.html"><i class="fa fa-check-square-o"></i> Check Kehadiran II </a></li>
-                  <li><a href="check_iuran-I.html"><i class="fa fa-check-square-o"></i> Check Iuran I </a></li>
-                  <li><a href="check_iuran-II.html"><i class="fa fa-check-square-o"></i> Check Iuran II </a></li>
+                  <li><a href="check_kehadiran.html"><i class="fa fa-check-square-o"></i> Check Kehadiran </a></li>
+                  <li><a href="check_iuran.html"><i class="fa fa-check-square-o"></i> Check Iuran </a></li>
                 </ul>
               </div>
 
@@ -197,51 +195,78 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <!-- top tiles -->
-          <div class="row tile_count">
-            <div class="col-md-3 col-sm-3 col-xs-12 tile_stats_count">
-              <span class="count_top"><i class="fa fa-comments-o"></i> Pertemuan Berikutnya</span>
-              <div class="count">19/08/2019</div>
-              <span class="count_bottom"><i class="fa fa-chevron-circle-right"></i> Tempat <strong>Ketua Humamiku</strong></span>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-12 tile_stats_count">
-              <span class="count_top"><i class="fa fa-dollar"></i> Total Iuran</span>
-              <div class="count">Rp 250.000</div>
-              <span class="count_bottom"><i class="fa fa-chevron-circle-right"></i> Dari Pertemuan Sebelumnya</span>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-12 tile_stats_count">
-              <span class="count_top"><i class="fa fa-money"></i> Total KAS</span>
-              <div class="count">Rp 2.500.000</div>
-              <span class="count_bottom"><i class="fa fa-chevron-circle-right"></i> Sampai Saat Ini</span>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-12 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> User Aktif</span>
-              <div class="count">10</div>
-              <span class="count_bottom"><i class="fa fa-chevron-circle-right"></i> Saat Ini</span>
-            </div>
-          </div>
-          <!-- /top tiles -->
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Manajemen Pertemuan <small>HUMAMIKU</small></h3>
+              </div>
 
-          <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2>Rangkuman <strong>Iuran</strong> dari 5 pertemuan terakhir</h2>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <canvas id="lineChart1"></canvas>
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2>Rangkuman <strong>KAS</strong> dari 5 pertemuan terakhir</h2>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <canvas id="lineChart2"></canvas>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Tambah Cash Flow <small>Manajemen Cash Flow</small></h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                      <div class="form-group">
+                        <label class="col-md-1 col-sm-1 col-xs-12">No</label>
+                        <label class="col-md-2 col-sm-2 col-xs-12">Nominal</label>
+                        <label class="col-md-3 col-sm-3 col-xs-12">Jenis</label>
+                        <label class="col-md-4 col-sm-4 col-xs-12">Keterangan</label>
+                        <label class="col-md-2 col-sm-2 col-xs-12">Action</label>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-md-1 col-sm-1 col-xs-12">1</label>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                          <input type="text" required="required" name="nominal" class="form-control">
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                          <select class="form-control">
+                            <option>--Jenis--</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                          </select>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                          <textarea class="resizable_textarea form-control"></textarea>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                          <button type="button" class="add btn btn-round btn-info btn-sm"><i class="fa fa-plus"></i></button>
+                          <button type="button" class="remove btn btn-round btn-danger btn-sm"><i class="fa fa-minus"></i></button>
+                        </div>
+                      </div>
+                      <div class="form-group" value="1" id="total_chq">
+                        
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <a href="show_pertemuan.html" type="button" class="btn btn-primary"><i class="fa fa-rotate-left"></i> Kembali</a>
+                          <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
+                        </div>
+                      </div>
+
+                    </form>
+
+                  </div>
                 </div>
               </div>
             </div>
@@ -300,83 +325,49 @@
 
     <!-- Custom Theme Scripts -->
     <script src="dashboard/js/custom.min.js"></script>
-	   
+  
     <script>
-      var ctx1 = document.getElementById("lineChart1");
-      var myChart1 = new Chart(ctx1, {
-        type: 'line',
-        data: {
-          labels: ["19/10/2019", "20/10/2019", "21/10/2019", "22/10/2019", "23/10/2019"],
-          datasets: [{
-            label: "Total Iuran",
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: "rgba(75,192,192,0.4)",
-            borderColor: "rgba(75,192,192,1)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(75,192,192,1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: "rgba(75,192,192,1)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 2,
-            pointRadius: 1,
-            pointHitRadius: 10,
-            data: [200000, 210000, 180000, 200000, 250000],
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero:true
-              }
-            }]
-          }
-        }
-      });
+      $('.add').on('click', add);
+      $('.remove').on('click', remove);
 
-      var ctx2 = document.getElementById("lineChart2");
-      var myChart2 = new Chart(ctx2, {
-        type: 'line',
-        data: {
-          labels: ["19/10/2019", "20/10/2019", "21/10/2019", "22/10/2019", "23/10/2019"],
-          datasets: [{
-            label: "Total KAS",
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: "rgba(75,192,192,0.4)",
-            borderColor: "rgba(0,255,0,1)",
-            borderCapStyle: 'butt',
-            borderDash: [],
-            borderDashOffset: 0.0,
-            borderJoinStyle: 'miter',
-            pointBorderColor: "rgba(0,255,0,1)",
-            pointBackgroundColor: "#fff",
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: "rgba(0,255,0,1)",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointHoverBorderWidth: 2,
-            pointRadius: 1,
-            pointHitRadius: 10,
-            data: [200000, 210000, 180000, 200000, 250000],
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero:true
-              }
-            }]
-          }
-        }
-      });
+      function add() {
+        var new_chq_no = parseInt($('#total_chq').val()) + 1;
+        console.log(new_chq_no)
+        // var new_input = `
+        //                 <div class="form-group">
+        //                   <label class="col-md-1 col-sm-1 col-xs-12">new_chq_no</label>
+        //                   <div class="col-md-2 col-sm-2 col-xs-12">
+        //                     <input type="text" required="required" name="nominal" class="form-control" id='new_" + new_chq_no + "'>
+        //                   </div>
+        //                   <div class="col-md-3 col-sm-3 col-xs-12">
+        //                     <select class="form-control">
+        //                       <option>--Jenis--</option>
+        //                       <option value="1">1</option>
+        //                       <option value="2">2</option>
+        //                       <option value="3">3</option>
+        //                       <option value="4">4</option>
+        //                     </select>
+        //                   </div>
+        //                   <div class="col-md-4 col-sm-4 col-xs-12">
+        //                     <textarea id='new_" + new_chq_no + "' class="resizable_textarea form-control"></textarea>
+        //                   </div>
+        //                 </div>
+        //               <input type='text' id='new_" + new_chq_no + "'>`;
+
+        // $('#new_chq').append(new_input);
+
+        // $('#total_chq').val(new_chq_no);
+      }
+
+      function remove() {
+        // var last_chq_no = $('#total_chq').val();
+
+        // if (last_chq_no > 1) {
+        //   $('#new_' + last_chq_no).remove();
+        //   $('#total_chq').val(last_chq_no - 1);
+        // }
+      }
     </script>
+
   </body>
 </html>
