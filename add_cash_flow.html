@@ -222,50 +222,27 @@
                     <h2>Tambah Cash Flow <small>Manajemen Cash Flow</small></h2>
                     <div class="clearfix"></div>
                   </div>
+                  
+                      
                   <div class="x_content">
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-                      <div class="form-group">
-                        <label class="col-md-1 col-sm-1 col-xs-12">No</label>
-                        <label class="col-md-2 col-sm-2 col-xs-12">Nominal</label>
-                        <label class="col-md-3 col-sm-3 col-xs-12">Jenis</label>
-                        <label class="col-md-4 col-sm-4 col-xs-12">Keterangan</label>
-                        <label class="col-md-2 col-sm-2 col-xs-12">Action</label>
+                    <form id="form1" data-parsley-validate class="form-horizontal form-label-left">
+                      <div class="table-responsive">
+                        <table class="table table-bordered" id="item_table">
+                          <tr>
+                            <th style="vertical-align: middle;">Nominal</th>
+                            <th style="vertical-align: middle;">Jenis</th>
+                            <th style="vertical-align: middle;">Keterangan</th>
+                            <th style="vertical-align: middle;"><button type="button" name="add" class="add btn btn-round btn-success btn-sm"><i class="fa fa-plus"></i></button></th>
+                          </tr>
+                        </table>
                       </div>
-                      <div class="form-group">
-                        <label class="col-md-1 col-sm-1 col-xs-12">1</label>
-                        <div class="col-md-2 col-sm-2 col-xs-12">
-                          <input type="text" required="required" name="nominal" class="form-control">
-                        </div>
-                        <div class="col-md-3 col-sm-3 col-xs-12">
-                          <select class="form-control">
-                            <option>--Jenis--</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                          </select>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                          <textarea class="resizable_textarea form-control"></textarea>
-                        </div>
-                        <div class="col-md-2 col-sm-2 col-xs-12">
-                          <button type="button" class="add btn btn-round btn-info btn-sm"><i class="fa fa-plus"></i></button>
-                          <button type="button" class="remove btn btn-round btn-danger btn-sm"><i class="fa fa-minus"></i></button>
-                        </div>
-                      </div>
-                      <div class="form-group" value="1" id="total_chq">
-                        
-                      </div>
-                      <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <a href="show_pertemuan.html" type="button" class="btn btn-primary"><i class="fa fa-rotate-left"></i> Kembali</a>
+                          <a href="show_cash_flow.html" type="button" class="btn btn-primary"><i class="fa fa-rotate-left"></i> Kembali</a>
                           <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
                         </div>
                       </div>
-
                     </form>
-
                   </div>
                 </div>
               </div>
@@ -327,46 +304,24 @@
     <script src="dashboard/js/custom.min.js"></script>
   
     <script>
-      $('.add').on('click', add);
-      $('.remove').on('click', remove);
+      // $('.add').on('click', add);
+      // $('.remove').on('click', remove);
+      
+      $(document).ready(function(){
+        $(document).on('click', '.add', function() {
+          var html = '';
+          html += '<tr>';
+          html += '<td><input type="text" name="item_nominal[]" class="form-control item_nominal"></td>';
+          html += '<td><select name="item_jenis[]" class="form-control item_jenis"><option>--Jenis--</option><option value="1">1</option><option value="2">2</option></select></td>';
+          html += '<td><input type="text" name="item_ket[]" class="form-control item_ket"></td>';
+          html += '<td><button type="button" name="remove" class="remove btn btn-round btn-danger btn-sm"><i class="fa fa-minus"></i></button></td></tr>';
+          $('#item_table').append(html);
+        });
 
-      function add() {
-        var new_chq_no = parseInt($('#total_chq').val()) + 1;
-        console.log(new_chq_no)
-        // var new_input = `
-        //                 <div class="form-group">
-        //                   <label class="col-md-1 col-sm-1 col-xs-12">new_chq_no</label>
-        //                   <div class="col-md-2 col-sm-2 col-xs-12">
-        //                     <input type="text" required="required" name="nominal" class="form-control" id='new_" + new_chq_no + "'>
-        //                   </div>
-        //                   <div class="col-md-3 col-sm-3 col-xs-12">
-        //                     <select class="form-control">
-        //                       <option>--Jenis--</option>
-        //                       <option value="1">1</option>
-        //                       <option value="2">2</option>
-        //                       <option value="3">3</option>
-        //                       <option value="4">4</option>
-        //                     </select>
-        //                   </div>
-        //                   <div class="col-md-4 col-sm-4 col-xs-12">
-        //                     <textarea id='new_" + new_chq_no + "' class="resizable_textarea form-control"></textarea>
-        //                   </div>
-        //                 </div>
-        //               <input type='text' id='new_" + new_chq_no + "'>`;
-
-        // $('#new_chq').append(new_input);
-
-        // $('#total_chq').val(new_chq_no);
-      }
-
-      function remove() {
-        // var last_chq_no = $('#total_chq').val();
-
-        // if (last_chq_no > 1) {
-        //   $('#new_' + last_chq_no).remove();
-        //   $('#total_chq').val(last_chq_no - 1);
-        // }
-      }
+        $(document).on('click', '.remove', function(){
+          $(this).closest('tr').remove();
+        });
+      });
     </script>
 
   </body>
